@@ -15,42 +15,42 @@ public class TouchTest : MonoBehaviour
 
     void Update()
     {
-        // if(Input.touchCount == 0)
-        //     return;
+        if(Input.touchCount == 0)
+            return;
         
-        // var touches = Input.touches;
+        var touches = Input.touches;
 
-        // while (visualList.Count < touches.Length)
-        // {
-        //     var visual = Instantiate(visualTemplate);
-        //     visualList.Add(visual);
-        // }
+        while (visualList.Count < touches.Length)
+        {
+            var visual = Instantiate(visualTemplate);
+            visualList.Add(visual);
+        }
 
-        // foreach (var visual in visualList)
-        // {
-        //     visual.SetActive(false);   
-        // }
+        foreach (var visual in visualList)
+        {
+            visual.SetActive(false);   
+        }
 
-        // for (int i = 0; i < touches.Length; i++)
-        // {
-        //     var touch = touches[i];
-        //     var visual = visualList[i];
+        for (int i = 0; i < touches.Length; i++)
+        {
+            var touch = touches[i];
+            var visual = visualList[i];
 
-        //     switch(touch.phase)
-        //     {
-        //         case TouchPhase.Began:
-        //         case TouchPhase.Stationary:
-        //         case TouchPhase.Moved:
-        //            visual.SetActive(true);
-        //            var worldPos = cam.ScreenToWorldPoint(touch.position);
-        //            worldPos.z = 0;
-        //            visual.transform.position = worldPos;
-        //             break;     
-        //         case TouchPhase.Ended:     
-        //         case TouchPhase.Canceled:
-        //             break;     
-        //     }
-        // }
+            switch(touch.phase)
+            {
+                case TouchPhase.Began:
+                case TouchPhase.Stationary:
+                case TouchPhase.Moved:
+                   visual.SetActive(true);
+                   var worldPos = cam.ScreenToWorldPoint(touch.position);
+                   worldPos.z = 0;
+                   visual.transform.position = worldPos;
+                    break;     
+                case TouchPhase.Ended:     
+                case TouchPhase.Canceled:
+                    break;     
+            }
+        }
 
         // if (Input.touchCount != 2)
         //     return;
@@ -75,11 +75,11 @@ public class TouchTest : MonoBehaviour
         //     cam.transform.position = new Vector3(cam.transform.position.x, cam.transform.position.y, z);
         // }
 
-        if(Input.touchCount != 1)
-            return;
+        // if(Input.touchCount != 1)
+        //     return;
         
-        var touch = Input.GetTouch(0);
+        // var touch = Input.GetTouch(0);
 
-        cam.transform.position -= (Vector3) touch.deltaPosition * 0.001f;
+        // cam.transform.position -= (Vector3) touch.deltaPosition * 0.001f;
     }
 }
