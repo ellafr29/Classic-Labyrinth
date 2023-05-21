@@ -22,6 +22,6 @@ public class GravityController : MonoBehaviour
             gravity = Input.acceleration * acceleration;
             
         gravity.z = Mathf.Clamp(gravity.z, float.MinValue, 0);
-        Physics.gravity = new Vector3(gravity.x, gravity.z, gravity,y);
+        Physics.gravity = new Vector3(gravity.x, gravity.z, gravity.y);
     }
 }
