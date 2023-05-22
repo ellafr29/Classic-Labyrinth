@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Holle : MonoBehaviour
+public class Hole : MonoBehaviour
 {
-    UnityEvent OnBallEnter = new UnityEvent();
+    [SerializeField] CustomEvent customEvent;
     private void OnCollisionEnter(Collision other)
     {
         OnTriggerEnter(other.collider);
@@ -15,8 +15,7 @@ public class Holle : MonoBehaviour
     {
         if (other.CompareTag("Ball"))
         {
-            Debug.Log("Ball Enter");
-            OnBallEnter.Invoke();
+            customEvent.OnInvoked.Invoke();
         }
     }
 }

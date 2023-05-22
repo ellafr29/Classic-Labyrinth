@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9fdec5aa69e10cf4fae01e0f2cd7eba8, type: 3}
-  m_Name: Bronze Coin
+  m_Name: Gold Coin
   m_EditorClassIdentifier: 
-  value: 1
-  material: {fileID: 0}
+  value: 3
+  material: {fileID: 2100000, guid: 88adaae23636c7c43b4a7a49a74889fa, type: 2}

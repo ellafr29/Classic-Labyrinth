@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Hole : MonoBehaviour
+public class Holle : MonoBehaviour
 {
     public UnityEvent OnBallEnter = new UnityEvent();
     private void OnCollisionEnter(Collision other)
