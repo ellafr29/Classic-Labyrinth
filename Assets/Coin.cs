@@ -5,15 +5,14 @@ using DG.Tweening;
 
 public class Coin : MonoBehaviour
 {
-    [SerializeField] int value;
     [SerializeField] Transform visual;
-    public int Value
-    {
-        get => value;
-    }
+    [SerializeField] CoinData coinData;
 
+    public int Value{get => coinData.value;}
+    
     private void Start()
     {
+        visual.GetComponent<Renderer>().material = coinData.material;
         Animate();
     }
     
